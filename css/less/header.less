@@ -1,0 +1,162 @@
+/*******************************
+*** Variaveis
+*******************************/
+@cinza: #443E3E;
+@bg: #f8e0de;
+@azul: #032144;
+@branco: #fff;
+@azul-2: #00E7B3;
+@laranja: #FE5739;
+
+@tamanho-w: 97%;
+
+/*******************************
+*** Resets
+*******************************/
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+}
+
+body {
+	font-family: 'Quicksand', Arial, sans-serif;
+	font-weight: 500;
+	color: @cinza;
+	background: @bg;
+}
+
+a {
+	color: @cinza;
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+
+/*******************************
+*** Header
+*******************************/
+.nav-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: @tamanho-w;
+	margin: 5px 20px;
+	font-size: 20px;
+
+	.header-esq, .header-dir {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	.header-esq { //conteudo esquerda do header
+		
+		.menu {
+			cursor: pointer;
+			&:hover {color: @laranja;}
+		}
+
+		.back {
+			margin: 0 15px;
+
+			a {
+				color: lighten(@cinza, 35%);
+				&:hover {color: @laranja;}
+			}
+		}
+
+	}
+
+	.header-dir {//conteudo direita do header
+
+		& .user {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			width: 150px;
+
+			&::after {
+				content: "";
+				display: block;
+				width: 1px;
+				height: 35px;
+				background: darken(@bg, 10%);
+				margin-left: 20px;
+			}
+			
+			.user-item {
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				
+
+				& .user-photo {
+					margin: 0 8px;
+				}
+
+				& .user-name {
+					& p:first-child{color:@cinza;font-size:.85em;}
+					& p:last-child{color:lighten(@cinza, 25%);font-size:.70em;text-transform: uppercase;}
+				}
+
+				img {
+					height: 40px;
+					border-radius: 4px;
+				}	
+			}//fecha .user-item
+		}//fecha & .user
+
+		& .ui-playlist {
+			cursor: pointer;
+
+			ul { 
+				margin-left: 5px;
+				cursor: default;
+
+				li {
+					display: inline-block;
+					margin: 0 20px;
+					cursor: pointer;
+
+					&:hover {color: @laranja;}
+				}
+			}//fecha ul
+		}//fecha & .ui-playlist
+		
+
+	}//fecha header-dir
+
+}
+
+/*******************************
+*** Mobile
+*******************************/
+@media screen and (max-width: 540px) { //qndo atingir o max de 540px
+	.back {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 435px) {
+	.header-dir {
+		justify-content: center;
+	}
+
+	.user { 
+		margin: 15px 0;
+	}
+}
+

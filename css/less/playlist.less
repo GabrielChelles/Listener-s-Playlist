@@ -1,0 +1,55 @@
+.playlist-menu {
+	background: @branco;
+	width: 40%;
+	height: 100%;
+	position: fixed;
+	display: block;
+	right: 0;
+	top: 0;
+	box-shadow: -7px 0 22px darken(@cinza, 10%);
+	
+	.principal-music {
+		border-bottom: 1px solid @cinza;
+
+		.music-head {
+			display: flex;
+
+			div {
+				margin: 15px;
+			}
+			
+			img {
+				height: 200px;
+				border-radius: 5px;
+			}
+
+			h2, p {
+				margin: 15px 0;
+			}
+
+			h2 {
+				text-transform: capitalize;
+				font-size: 1.87em;
+			}
+
+			p {
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+		}//fecha music-head
+		
+		.music-controls {
+			margin: 15px;
+
+			li {
+				display: inline-block;
+			}
+
+		}//fecha music-controls
+
+
+
+
+	}//fecha principal-music
+
+}//fecha playlist-menu

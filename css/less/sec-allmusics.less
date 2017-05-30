@@ -1,0 +1,54 @@
+/***************************************************************** */
+/**** Table-Musics/
+/***************************************************************** */
+.sec-azul {
+	background: @azul;
+}
+
+.table {
+	width: @tamanho-w;
+	margin: 0 auto;
+	color: @branco;
+
+	.table-musics {
+		display: flex;
+		flex-direction: column;
+
+		tr {
+			margin: 10px;
+			max-width: @tamanho-w;
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: center;
+			justify-content: space-between;
+			cursor: pointer;
+			padding: 5px;
+			margin-right: 5px; 
+			text-align: left;
+			text-transform: capitalize;
+			border-bottom: 1px solid @cinza;
+			
+			//define o tamanho de cada coluna da tabela
+			& td:nth-child(1) {flex: 1;}
+			& td:nth-child(2) {flex: 3;}
+			& td:nth-child(3) {flex: 3;}
+			& td:nth-child(4) {flex: 2;}
+			& td:nth-child(5) {flex: 2;}
+
+			&:hover {
+				background: darken(@azul, 5%);
+			}
+		}
+
+	}//fecha table-musics
+
+}
+//fecha table
+
+.music-rod-selected {
+	background: darken(@azul, 5%);
+
+	i{
+		color: @azul-2;
+	}
+}

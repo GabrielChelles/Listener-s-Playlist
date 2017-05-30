@@ -1,0 +1,96 @@
+.title-listeners {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	max-width: @tamanho-w;
+	margin: 45px auto;
+	font-weight: 800;
+	
+	h1 {
+		font-size: 4em;
+	}
+
+	.risco-titulo {
+		display: block;
+		height: 2px;
+		width: 25px;
+		background: @cinza;
+		margin: 0 10px;
+	}
+
+}
+
+/***************************************************************** */
+/**** Musics/
+/***************************************************************** */
+.musics {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	width: @tamanho-w;
+	margin: 9% auto;
+	justify-content: center;
+
+	.music-item {
+		display: block;
+		height: auto;
+		width: 150px;
+		margin: 30px;
+		cursor: pointer;
+		transition: all 425ms ease;
+
+		&:hover {
+			margin-top: 0;
+			img {
+				box-shadow: 0 6px 8px @cinza;
+				-ms-box-shadow: 0 6px 8px @cinza;
+				-o-box-shadow: 0 6px 8px @cinza;
+				-webkit-box-shadow: 0 6px 8px @cinza;
+			}
+		}
+
+		img {
+			border-radius: 50%;
+		}
+
+		.infos-music {
+			margin-top: 10px;
+
+			p {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				color: @cinza;
+				text-transform: capitalize;
+			}
+		}//fecha infos-music
+
+	}//fecha music-item
+}//fecha musics
+
+.musics .music-selected {
+	margin-top: 0;
+	
+	img {
+		box-shadow: 0 6px 8px @cinza;
+		-ms-box-shadow: 0 6px 8px @cinza;
+		-o-box-shadow: 0 6px 8px @cinza;
+		-webkit-box-shadow: 0 6px 8px @cinza;
+	}
+}
+
+/*******************************
+*** Mobile
+*******************************/
+
+
+
+@media screen and (max-width: 435px) {
+	.title-listeners {
+		h1 {
+			font-size: 3em;
+		}
+	}
+}
